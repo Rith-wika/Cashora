@@ -101,11 +101,12 @@ const Footer = () => {
             >
               <h4 className="font-semibold text-primary-foreground mb-4">Contact</h4>
               <ul className="space-y-2 text-sm text-primary-foreground/70">
-                <li>support@cashora.app</li>
-                <li>+91 80 1234 5678</li>
+                <li>support@sriainfotech.com</li>
+                <li>+91 9701314138</li>
                 <li>
-                  123 Business Park,<br />
-                  Tech City, Bangalore 560001
+                  First Floor, 1-121/63 Survey No. 63 Part,<br />
+                  Hotel Sitara Grand Backside, Miyapur,<br />
+                  Telangana 500049
                 </li>
               </ul>
             </motion.div>

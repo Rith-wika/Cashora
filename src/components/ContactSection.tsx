@@ -179,8 +179,9 @@ const ContactSection = () => {
                   <div>
                     <h4 className="font-medium text-foreground mb-1">Office Address</h4>
                     <p className="text-muted-foreground text-sm">
-                      123 Business Park, Tech City,<br />
-                      Bangalore, Karnataka 560001, India
+                      First Floor, 1-121/63 Survey No. 63 Part,<br />
+                      Hotel Sitara Grand Backside, Miyapur,<br />
+                      Telangana 500049, India
                     </p>
                   </div>
                 </div>
@@ -190,8 +191,7 @@ const ContactSection = () => {
                   </div>
                   <div>
                     <h4 className="font-medium text-foreground mb-1">Email Address</h4>
-                    <p className="text-muted-foreground text-sm">support@cashora.app</p>
-                    <p className="text-muted-foreground text-sm">sales@cashora.app</p>
+                    <p className="text-muted-foreground text-sm">support@sriainfotech.com</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
@@ -200,8 +200,7 @@ const ContactSection = () => {
                   </div>
                   <div>
                     <h4 className="font-medium text-foreground mb-1">Phone Number</h4>
-                    <p className="text-muted-foreground text-sm">+91 80 1234 5678</p>
-                    <p className="text-muted-foreground text-sm">+91 98765 43210</p>
+                    <p className="text-muted-foreground text-sm">+91 9701314138</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">

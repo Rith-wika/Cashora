@@ -7,7 +7,9 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Checkbox } from '@/components/ui/checkbox';
 import { useToast } from '@/hooks/use-toast';
-import PolicyAccordion from './PolicyAccordion';
+import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
+import { policyData } from '@/data/policyData';
 
 const ContactSection = () => {
   const ref = useRef(null);
@@ -63,7 +65,7 @@ const ContactSection = () => {
             Get In <span className="gradient-text">Touch</span>
           </h2>
           <p className="text-lg text-muted-foreground">
-            Have questions about CASHORA? We're here to help you get started with 
+            Have questions about CASHORA? We're here to help you get started with
             your petty cash management journey.
           </p>
         </motion.div>
@@ -146,7 +148,7 @@ const ContactSection = () => {
                     className="mt-1"
                   />
                   <label htmlFor="agree" className="text-sm text-muted-foreground cursor-pointer">
-                    I agree to the Terms & Conditions, Privacy Policy, Refund & Cancellation Policy, 
+                    I agree to the Terms & Conditions, Privacy Policy, Refund & Cancellation Policy,
                     Return Policy, and Shipping Policy.
                   </label>
                 </div>
@@ -191,7 +193,7 @@ const ContactSection = () => {
                   </div>
                   <div>
                     <h4 className="font-medium text-foreground mb-1">Email Address</h4>
-                    <p className="text-muted-foreground text-sm">support@sriainfotech.com</p>
+                    <p className="text-muted-foreground text-sm">sales@sriainfotech.com</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
@@ -237,12 +239,51 @@ const ContactSection = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.5 }}
-          className="mt-12"
+          className="mt-16"
         >
-          <PolicyAccordion />
+          <div className="text-center mb-10">
+            <h3 className="text-2xl font-bold mb-4">Our Policies</h3>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              Transparent terms and clear policies to ensure a secure and reliable experience for all our users.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {policyData.map((policy, index) => (
+              <motion.div
+                key={policy.id}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="glass-card p-6 rounded-2xl border border-border/50 flex flex-col hover:shadow-elevated transition-all duration-300 group hover:-translate-y-1 bg-background/40 backdrop-blur-md"
+              >
+                <div className="mb-4 p-3 rounded-full bg-primary/10 w-fit">
+                  <div className="w-6 h-6 text-primary flex items-center justify-center font-bold">
+                    {index + 1}
+                  </div>
+                </div>
+
+                <h3 className="text-lg font-bold mb-3 text-foreground group-hover:text-primary transition-colors">
+                  {policy.title}
+                </h3>
+
+                <p className="text-sm text-muted-foreground mb-6 line-clamp-2 flex-grow">
+                  {policy.description}
+                </p>
+
+                <Link
+                  to={`/policies/${policy.id}`}
+                  className="inline-flex items-center text-sm font-semibold text-primary/90 hover:text-primary transition-colors mt-auto pt-4 border-t border-border/30"
+                >
+                  View Policy <ArrowRight className="w-4 h-4 ml-1 transition-transform group-hover:translate-x-1" />
+                </Link>
+              </motion.div>
+            ))}
+          </div>
         </motion.div>
       </div>
-    </section>
+    </section >
   );
 };
 

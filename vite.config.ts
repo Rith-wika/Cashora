@@ -13,7 +13,7 @@ export default defineConfig(({ mode }) => ({
     },
   },
   plugins: [react(), mode === "development" && componentTagger()].filter(Boolean),
-  base: "/cashora-smart-cash-flows/",
+  base: "/cashora/",
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),

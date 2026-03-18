@@ -127,4 +127,61 @@ export const policyData: Policy[] = [
             </div>
         ),
     },
+    {
+        id: 'delete-account',
+        title: 'Delete a Account',
+        description: 'Request deletion of your account and associated data.',
+        content: (
+            <div className="space-y-6 text-foreground">
+                <div className="border-b border-border pb-6 mb-6">
+                    <h3 className="text-2xl font-bold text-foreground">Cashora - Account Deletion Request</h3>
+                </div>
+
+                <div className="glass-card p-6 rounded-2xl border border-border/50 bg-accent/5 backdrop-blur-sm">
+                    <p className="text-lg leading-relaxed mb-4">
+                        Users can request deletion of their account and associated data by emailing us at:
+                    </p>
+                    <div className="flex items-center gap-2 p-4 bg-primary/10 rounded-xl w-fit mb-4">
+                        <a href="mailto:support@cashora.com" className="text-xl font-bold text-primary hover:underline">
+                            support@cashora.com
+                        </a>
+                    </div>
+                    <p className="text-muted-foreground font-medium flex items-center gap-2">
+                        Please include your registered email ID.
+                    </p>
+                </div>
+
+                <div className="grid md:grid-cols-2 gap-6 mt-8">
+                    <div className="space-y-4 p-6 rounded-2xl border border-border/40 bg-background/50">
+                        <h4 className="font-bold text-lg flex items-center gap-2 text-foreground">
+                            Data that will be deleted:
+                        </h4>
+                        <ul className="space-y-2">
+                            {['User profile (name, email, phone)', 'Requests and transaction history', 'Uploaded documents'].map((item, index) => (
+                                <li key={index} className="flex items-center gap-2 text-muted-foreground">
+                                    <span className="w-1.5 h-1.5 rounded-full bg-primary" />
+                                    {item}
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+
+                    <div className="space-y-4 p-6 rounded-2xl border border-border/40 bg-background/50">
+                        <h4 className="font-bold text-lg flex items-center gap-2 text-foreground">
+                            Data retention:
+                        </h4>
+                        <p className="text-muted-foreground leading-relaxed">
+                            Some financial records may be retained for legal compliance (up to 90 days)
+                        </p>
+                    </div>
+                </div>
+
+                <div className="p-6 rounded-2xl bg-gradient-to-r from-primary/10 to-purple-500/10 border border-primary/20 flex items-center gap-4">
+                    <p className="font-medium text-foreground">
+                        Account deletion requests will be processed within <span className="text-primary font-bold underline decoration-wavy decoration-primary/30">7 working days</span>.
+                    </p>
+                </div>
+            </div>
+        ),
+    },
 ];

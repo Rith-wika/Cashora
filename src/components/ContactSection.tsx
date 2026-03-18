@@ -149,7 +149,7 @@ const ContactSection = () => {
                   />
                   <label htmlFor="agree" className="text-sm text-muted-foreground cursor-pointer">
                     I agree to the Terms & Conditions, Privacy Policy, Refund & Cancellation Policy,
-                    Return Policy, and Shipping Policy.
+                    Return Policy, Shipping Policy, and Delete a Account Policy.
                   </label>
                 </div>
 

@@ -220,11 +220,15 @@ const ContactSection = () => {
 
             {/* Quick Actions */}
             <div className="grid grid-cols-2 gap-4">
-              <div className="glass-card rounded-xl p-4 text-center hover-lift border border-border/50">
+              <a 
+                href="https://play.google.com/store/apps/details?id=com.cashora.finance"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="glass-card rounded-xl p-4 text-center hover-lift border border-border/50 block transition-all"
+              >
                 <div className="text-3xl mb-2">📱</div>
                 <h4 className="font-medium text-sm text-foreground">Download App</h4>
-                <p className="text-xs text-muted-foreground">Coming Soon</p>
-              </div>
+              </a>
               <div className="glass-card rounded-xl p-4 text-center hover-lift border border-border/50">
                 <div className="text-3xl mb-2">📧</div>
                 <h4 className="font-medium text-sm text-foreground">Newsletter</h4>
